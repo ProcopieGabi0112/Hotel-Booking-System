@@ -1,10 +1,6 @@
 # Hotel-Booking-System
 Hotel Booking System Application for hotel reservation management
-
-# Ebooking
-
-
-Simple Ebooking website using Django for backend & frontend, dockerized
+Booking dockerized website using Oracle 21c & Spring Boot and React 
 
 ## Technology stack  
 - **Deployment**: Docker Compose v2.12.2 (Docker Engine - Community v20.10.21)
