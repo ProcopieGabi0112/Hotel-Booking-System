@@ -55,7 +55,7 @@ Check this alse
 
 in order to ensure the installation is right check https://localhost:5500/em
 
-## Connection to database
+## Connection to database as sys
 
 Connect to [_system_] / [database-administrator] the create ur main users and schemas: 
 ```
@@ -84,6 +84,7 @@ DROP USER app_db_admin;
 CREATE USER app_db_admin IDENTIFIED BY pass;
 
 --we will grant him permissions
+GRANT CONNECT, RESOURCE TO app_db_admin;
 GRANT CREATE SESSION TO app_db_admin;
 GRANT CREATE TABLE TO app_db_admin;
 GRANT CREATE VIEW TO app_db_admin;
@@ -97,4 +98,22 @@ GRANT EXECUTE ANY PROCEDURE TO app_db_admin;
 --we will close pluggable database
 ALTER PLUGGABLE DATABASE orclpdb CLOSE;
 
+--we will finish our job
+COMMIT;
+
+```
+
+## Connection to database as app_db_admin
+
+Connect to [_app_db_admin_] / [created user] the create ur main users and schemas: 
+```
+Oracle SQL Developer environment:
+  
+ 🔼 Name: app_db_admin
+ 🔼 Username: app_db_admin
+ 🔼 Password: pass
+ 🔼 Hostname: localhost
+ 🔼 Port: 1521
+ ⚠️ Service name: orclpdb
+   
 ```
