@@ -84,6 +84,7 @@ DROP USER app_db_admin CASCADE;
 CREATE USER app_db_admin IDENTIFIED BY pass;
 
 --we will grant him permissions
+GRANT UNLIMITED TABLESPACE TO app_db_admin;
 GRANT CONNECT, RESOURCE TO app_db_admin;
 GRANT CREATE SESSION TO app_db_admin;
 GRANT CREATE TABLE, ALTER ANY TABLE TO app_db_admin;
