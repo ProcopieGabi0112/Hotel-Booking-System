@@ -79,14 +79,15 @@ ALTER PLUGGABLE DATABASE orclpdb OPEN;
 --we will set session to orclpdb
 ALTER SESSION SET CONTAINER=orclpdb;
 --we will check if the user is already created
-DROP USER app_db_admin;
+DROP USER app_db_admin CASCADE;
 --we will create user
 CREATE USER app_db_admin IDENTIFIED BY pass;
 
 --we will grant him permissions
 GRANT CONNECT, RESOURCE TO app_db_admin;
 GRANT CREATE SESSION TO app_db_admin;
-GRANT CREATE TABLE TO app_db_admin;
+GRANT CREATE TABLE, ALTER ANY TABLE TO app_db_admin;
+GRANT INSERT ANY TABLE TO app_db_admin;
 GRANT CREATE VIEW TO app_db_admin;
 GRANT CREATE PROCEDURE TO app_db_admin;
 GRANT CREATE SEQUENCE TO app_db_admin;
@@ -100,6 +101,7 @@ ALTER PLUGGABLE DATABASE orclpdb CLOSE;
 
 --we will finish our job
 COMMIT;
+
 
 ```
 
