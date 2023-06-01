@@ -72,7 +72,6 @@ Oracle SQL Developer environment:
 
 Creating a user other than system user
 ```
-
 CREATE USER app_user IDENTIFIED BY pass;
 
 GRANT CREATE SESSION TO app_user;
@@ -82,7 +81,6 @@ GRANT CREATE PROCEDURE TO app_user;
 GRANT CREATE SEQUENCE TO app_user;
 GRANT CREATE TRIGGER TO app_user;
 GRANT CREATE FUNCTION TO app_user;
-
 GRANT CREATE TYPE TO app_user; 
 GRANT CREATE INDEX TO app_user;
 GRANT ALTER SESSION TO app_user;
