@@ -1,15 +1,14 @@
 # Hotel-Booking-System
-Hotel Booking System Application for hotel reservation management
+Hotel Booking System Application for hotel reservations management
 
 Booking dockerized website using Oracle 21c & Spring Boot and React 
 
 ## Technology stack  
 - **Deployment**: Docker Compose v2.12.2 (Docker Engine - Community v20.10.21)
-- **Backend**: Django 4.1.5 (Python 3.11)
-- **Async tasks**: Celery 5.2.3 (dawn-chorus)
-- **Message broker**: Redis 5.0.7
-- **Frontend**: Django templates
-- **Styling**: Bootstrap4, Django Crispy Forms
+- **Backend**: Spring Boot 3.1.0  (Java 20)
+- **Database**: Oracle Database (21c)
+- **Frontend**: React 18.2
+- **Styling**: Bootstrap4
 
 ## Setting up OS Requirements
 1. Install Docker on your OS. 
