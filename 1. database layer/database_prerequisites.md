@@ -14,15 +14,18 @@
 3. Seach for the file setup.exe in the path `C:\oracle21c\db`. Press right-clck on setup.exe file and access the file using the option of RUN AS ADMINISTRATOR
 
 4. Intermediate steps
+
   ⚠️ Create and configure a single instance database 
+  
   ⚠️ Desktop class
+  
   ⚠️ Use Windows Build-in Account
   
 5. Environment Setup
 
 Base file of the database
 ```
- Oracle base  `C:\oracle21c`
+ Oracle base:  `C:\oracle21c`
 ```
 
 Database files location
@@ -52,7 +55,7 @@ Check this alse
 
 in order to ensure the installation is right check https://localhost:5500/em
 
-## _Connection to database
+## Connection to database
 
 Connect to [_system_] / [database-administrator] the create ur main users and schemas: 
 ```
