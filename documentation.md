@@ -48,22 +48,13 @@ Use `start` when you start working.
 Use `up -d --build` only when the `docker-compose.dev.yml` file is changed.
 
 
-#### **Pg Admin Setup**
+#### **Developer Admin Setup**
 
-- Go to localhost:8001
-- Login with the credentials defined in the docker-compose file, associated with the pg_admin container
+- Login with the credentials defined in the docker-compose file, associated with the oracle container
 - Register a new Server connection
-- In the connection Tab,the hostname is the db_postgres container's name, credentials are defined in the docker-compose file asscoiated with the db_postgres container
-- Data is in the Servers->Databases Schemas->Tables
-#### **Services**
+- In the connection Tab,the hostname is the db container's name, credentials are defined in the docker-compose file asscoiated with the db container
 
-
-- [+django+]: Responsible for running the development webserver at `0.0.0.0:8000`. Autoreload functionality on code change is also functional,  
-- [+db_postgres+]: PostgreSQL database server. Used here in order to more closely resemble the prod environment,  
-- [+db_pgadmin+]: Web management interface for PostgreSQL db servers. Only accepts outside traffic from `127.0.0.1` on port `8001`,
-- [+celery_beat+] & [+celery_worker+]: Responsible for scheduling periodic tasks (e.g., DB backup) and executing asynchronous tasks (e.g., e-mail notifications), respectively,
-- [+redis+]: A message broker which allows Celery Beat, Celery Worker & Django to work together in order to execute periodic & async tasks.
-```
+#### **Setup**
 
 ## **Extra** commands
 Force build images & start containers for an environment: 
