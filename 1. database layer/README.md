@@ -72,18 +72,29 @@ Oracle SQL Developer environment:
 
 Creating a user other than system user
 ```
-CREATE USER app_user IDENTIFIED BY pass;
+--we will check if database is open
+SELECT name, open_mode FROM v$pdbs;
+--we will open pluggable database
+ALTER PLUGGABLE DATABASE orclpdb OPEN;
+--we will set session to orclpdb
+ALTER SESSION SET CONTAINER=orclpdb;
+--we will check if the user is already created
+DROP USER app_db_admin;
+--we will create user
+CREATE USER app_db_admin IDENTIFIED BY pass;
 
-GRANT CREATE SESSION TO app_user;
-GRANT CREATE TABLE TO app_user;
-GRANT CREATE VIEW TO nume_utilizator;
-GRANT CREATE PROCEDURE TO app_user;
-GRANT CREATE SEQUENCE TO app_user;
-GRANT CREATE TRIGGER TO app_user;
-GRANT CREATE FUNCTION TO app_user;
-GRANT CREATE TYPE TO app_user; 
-GRANT CREATE INDEX TO app_user;
-GRANT ALTER SESSION TO app_user;
-GRANT EXECUTE ANY PROCEDURE TO app_user;
+--we will grant him permissions
+GRANT CREATE SESSION TO app_db_admin;
+GRANT CREATE TABLE TO app_db_admin;
+GRANT CREATE VIEW TO app_db_admin;
+GRANT CREATE PROCEDURE TO app_db_admin;
+GRANT CREATE SEQUENCE TO app_db_admin;
+GRANT CREATE TRIGGER TO app_db_admin;
+GRANT CREATE TYPE TO app_db_admin; 
+GRANT ALTER SESSION TO app_db_admin;
+GRANT EXECUTE ANY PROCEDURE TO app_db_admin;
+
+--we will close pluggable database
+ALTER PLUGGABLE DATABASE orclpdb CLOSE;
 
 ```
