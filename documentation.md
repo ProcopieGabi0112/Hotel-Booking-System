@@ -14,7 +14,7 @@ Booking dockerized website using Oracle 21c & Spring Boot and React
 1. Install Docker on your OS. 
 ⚠️ Check your Docker Compose version by running `docker compose version`. Expected output: `Docker Compose version v2.6.0`.
 
-2.* Follow instructions at [Post-installation steps for Linux (Manage Docker as a non-root user)](https://docs.docker.com/engine/install/linux-postinstall/#manage-docker-as-a-non-root-user) in order to be able to run Docker without `root` privileges. Afterwards, run these two commands 
+2. Follow instructions at [Post-installation steps for Linux (Manage Docker as a non-root user)](https://docs.docker.com/engine/install/linux-postinstall/#manage-docker-as-a-non-root-user) in order to be able to run Docker without `root` privileges. Afterwards, run these two commands 
 ```
  sudo systemctl enable docker.service
  sudo systemctl enable containerd.service
