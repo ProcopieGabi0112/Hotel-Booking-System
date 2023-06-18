@@ -97,6 +97,7 @@ GRANT CREATE TYPE TO app_db_admin;
 GRANT ALTER SESSION TO app_db_admin;
 GRANT EXECUTE ANY PROCEDURE TO app_db_admin;
 GRANT CREATE SYNONYM TO app_db_admin;
+GRANT CREATE PUBLIC SYNONYM TO app_db_admin;
 
 --we will close pluggable database
 ALTER PLUGGABLE DATABASE orclpdb CLOSE;
